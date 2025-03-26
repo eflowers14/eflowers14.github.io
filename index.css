@@ -1,0 +1,99 @@
+html{
+    background: url("Fondo sin contraste.jpg");
+    color: white;
+}
+/* Main Section */
+.gridContainer{
+    display: grid;
+    gap: 20px;
+    border-radius: 5px;
+    font-family: Helvetica, sans-serif, monospace;
+    margin: auto;
+    padding: 15px;
+    min-width: 230px;
+    grid-template-areas: 
+    "about"
+    "skills"
+    "proyects"
+    ;
+}
+.aboutBox{
+    border: 2px solid #ccd;
+    border-radius: 5px;
+    margin: auto;
+    background: #55555510;
+    backdrop-filter: blur(5px);
+    grid-area: about;
+}
+.icon{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.skillsBox{
+    border: 2px solid #ccd;
+    border-radius: 5px;
+    margin: auto;
+    background: #55555510;
+    backdrop-filter: blur(5px);
+    grid-area: skills;
+}
+.proyectBox{
+    border: 2px solid #ccd;
+    border-radius: 5px;
+    margin: auto;
+    background: #55555510;
+    backdrop-filter: blur(5px);
+    grid-area: proyects;
+}
+h2, p{
+    margin-left: 5px;
+}
+
+/* Navegador Inferior */
+footer{
+    position: absolute;
+    bottom: 20px;
+    width: 97vw;
+}
+.footerBox{
+    margin: auto;
+    max-width: 80vw;
+}
+.navInferior{
+    display: flex;
+    background: #55555510;
+    backdrop-filter: blur(5px);
+    border: 2px solid #ccd;
+    border-radius: 10px;
+    list-style: none;
+}
+ul, li, a{
+    padding: 2px;
+    margin: auto;
+    text-decoration: none;
+    color: aquamarine;
+}
+
+/* Media queries MAIN */
+
+@media (min-width: 500px) {
+    .gridContainer{
+        grid-template-areas: 
+        "about skills"
+        "proyects proyects"
+        ;
+    }
+    footer{
+        bottom: 0;
+    }
+    .footerBox{
+        max-width: none;
+        margin: 0;
+    }
+    .navInferior{
+        height: 50px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
